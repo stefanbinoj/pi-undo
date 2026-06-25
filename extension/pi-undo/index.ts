@@ -315,6 +315,13 @@ export default function (pi: ExtensionAPI) {
 					ctx.ui.notify("Nothing to undo", "info");
 					return;
 				}
+				const undoneUserEntry = currentMsg
+					? findRunStartUserEntry(
+							ctx.sessionManager.getEntry(currentMsg),
+							ctx.sessionManager,
+						)
+					: null;
+				const navigationTarget = undoneUserEntry?.id ?? null;
 
 				const promptText = (await shadow.readNote("HEAD")) ?? "";
 
@@ -328,15 +335,6 @@ export default function (pi: ExtensionAPI) {
 					);
 					return;
 				}
-
-				const newMsg = await shadow.readCommitMessage("HEAD");
-				const newUserEntry = newMsg
-					? findRunStartUserEntry(
-							ctx.sessionManager.getEntry(newMsg),
-							ctx.sessionManager,
-						)
-					: null;
-				const navigationTarget = newUserEntry?.parentId ?? null;
 
 				if (navigationTarget) {
 					try {
