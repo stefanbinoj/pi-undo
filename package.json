@@ -1,0 +1,39 @@
+{
+  "name": "pi-undo",
+  "version": "0.1.0",
+  "description": "/undo command — clean context and revert file changes as it was earlier",
+  "type": "module",
+  "keywords": [
+    "pi-package",
+    "pi",
+    "pi-coding-agent",
+    "pi-extension",
+    "undo"
+  ],
+  "files": [
+    "extension/",
+    "assets/",
+    "LICENSE",
+    "README.md",
+    "tsconfig.json",
+    "package-lock.json"
+  ],
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "pi": {
+    "extensions": [
+      "./extension/pi-undo/index.ts"
+    ],
+    "image": "./assets/cover.png"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1"
+  },
+  "dependencies": {
+    "ignore": "^7.0.5"
+  }
+}
