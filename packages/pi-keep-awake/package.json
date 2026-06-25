@@ -1,0 +1,44 @@
+{
+  "name": "pi-keep-awake",
+  "version": "0.1.0",
+  "private": false,
+  "description": "Pi extension. Prevent your computer from sleeping while a Pi agent turn is running.",
+  "keywords": [
+    "pi-package",
+    "pi",
+    "pi-coding-agent",
+    "pi-extension",
+    "keep-awake",
+    "sleep",
+    "caffeinate",
+    "agent"
+  ],
+  "type": "module",
+  "license": "MIT",
+  "author": "stefanbinoj",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stefanbinoj/pi-packages.git",
+    "directory": "packages/pi-keep-awake"
+  },
+  "homepage": "https://github.com/stefanbinoj/pi-packages/tree/main/packages/pi-keep-awake#readme",
+  "bugs": {
+    "url": "https://github.com/stefanbinoj/pi-packages/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "extension/",
+    "README.md",
+    "LICENSE"
+  ],
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "pi": {
+    "extensions": [
+      "./extension/pi-keep-awake/index.ts"
+    ]
+  }
+}

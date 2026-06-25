@@ -17,14 +17,14 @@ import { createHash } from "node:crypto";
 import { execFile } from "node:child_process";
 import { homedir } from "node:os";
 import { join } from "node:path";
-import { C0_MARKER, NOTES_REF } from "./helper/constants";
+import { C0_MARKER, NOTES_REF } from "./helper/constants.js";
 import {
 	acquireLock,
 	buildIgnorePatterns,
 	extractUserText,
 	findRunStartUserEntry,
 	previewFor,
-} from "./helper/helper";
+} from "./helper/helper.js";
 
 async function exec(
 	cmd: string,

@@ -1,39 +1,23 @@
 {
-  "name": "pi-undo",
+  "name": "pi-packages",
   "version": "0.1.0",
-  "description": "/undo command — clean context and revert file changes as it was earlier",
+  "private": true,
   "type": "module",
-  "keywords": [
-    "pi-package",
-    "pi",
-    "pi-coding-agent",
-    "pi-extension",
-    "undo"
+  "workspaces": [
+    "packages/*"
   ],
-  "files": [
-    "extension/",
-    "assets/",
-    "LICENSE",
-    "README.md",
-    "tsconfig.json",
-    "package-lock.json"
-  ],
-  "peerDependencies": {
-    "@earendil-works/pi-coding-agent": "*"
-  },
-  "pi": {
-    "extensions": [
-      "./extension/pi-undo/index.ts"
-    ],
-    "image": "./assets/cover.png"
-  },
   "scripts": {
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit -p tsconfig.base.json",
+    "check": "npm run typecheck",
+    "publish:dry": "npm publish -ws --access public --dry-run",
+    "publish": "npm run check && npm publish -ws --access public"
   },
   "devDependencies": {
-    "@types/node": "^25.9.1"
+    "@types/node": "^25.9.1",
+    "typescript": "^6.0.3"
   },
-  "dependencies": {
-    "ignore": "^7.0.5"
+  "engines": {
+    "node": ">=22.0.0",
+    "npm": ">=11.0.0"
   }
 }

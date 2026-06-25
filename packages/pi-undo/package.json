@@ -1,0 +1,46 @@
+{
+  "name": "pi-undo",
+  "version": "0.1.0",
+  "private": false,
+  "description": "/undo command for Pi. Restore workspace files and rewind session context to before the last agent run.",
+  "keywords": [
+    "pi-package",
+    "pi",
+    "pi-coding-agent",
+    "pi-extension",
+    "undo"
+  ],
+  "type": "module",
+  "license": "MIT",
+  "author": "stefanbinoj",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stefanbinoj/pi-packages.git",
+    "directory": "packages/pi-undo"
+  },
+  "homepage": "https://github.com/stefanbinoj/pi-packages/tree/main/packages/pi-undo#readme",
+  "bugs": {
+    "url": "https://github.com/stefanbinoj/pi-packages/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "extension/",
+    "assets/",
+    "LICENSE",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "dependencies": {
+    "ignore": "^7.0.5"
+  },
+  "pi": {
+    "extensions": [
+      "./extension/pi-undo/index.ts"
+    ],
+    "image": "./assets/cover.png"
+  }
+}

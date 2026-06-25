@@ -2,7 +2,7 @@ import type { SessionEntry } from "@earendil-works/pi-coding-agent";
 import { existsSync } from "node:fs";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
-import { FALLBACK_EXCLUDES } from "./constants";
+import { FALLBACK_EXCLUDES } from "./constants.js";
 
 interface SessionReader {
 	getEntry(id: string): SessionEntry | undefined;
