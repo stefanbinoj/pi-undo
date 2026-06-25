@@ -2,6 +2,11 @@
 
 `/undo` command for [pi](https://github.com/earendil-works/pi-coding-agent) — restores the workspace and reverts the session tree to the state before the last agent run.
 
+
+https://github.com/user-attachments/assets/05a9a806-7f09-4375-9ff3-7e38a7a210b2
+
+
+
 ## What it does
 
 One command, two effects:
@@ -69,15 +74,10 @@ To wipe history for a session, delete that directory.
 - If the agent was cancelled mid-run, the run may not have been recorded, so `/undo` will report "Nothing to undo".
 - Does not undo side effects outside the repo (network calls, databases, etc.).
 
-## Development
+### ScreenShots
 
-Type-check:
+<img width="946" height="146" alt="Screenshot 2026-06-25 at 16-44-29" src="https://github.com/user-attachments/assets/859bc2fe-267f-47b9-a095-ea84588a5b99" />
 
-```bash
-npm run typecheck
-```
-
-The extension entry point is [`extension/pi-undo/index.ts`](extension/pi-undo/index.ts).
 
 ## License
 
